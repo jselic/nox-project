@@ -5,16 +5,21 @@ export function ChallengeBox(props){
     const {points,distance,title,description} = props;
     return (
         <View style={[FeedStyles.container, props.style]}>
-            <TouchableOpacity style={FeedStyles.save_button}>
-                <Text style={FeedStyles.button_text}>Save</Text>
-            </TouchableOpacity>
-            <View style={FeedStyles.meta_block}>
-                <Text style={FeedStyles.meta_text}>{points}</Text>
-                <Text style={FeedStyles.meta_text}>{distance}</Text>
-                <Text style={FeedStyles.meta_text}>{title}</Text>
+            <View style={FeedStyles.meta_infoblock}>
+                <Text style={FeedStyles.title}>{title}</Text>
+                <View style={FeedStyles.points_and_distance_container}>
+                    <Text style={FeedStyles.points}>{points} pts.</Text>
+                    <Text style={FeedStyles.distance}>{distance} km</Text>
+                </View>
             </View>
-            <View style={FeedStyles.description_block}>
-                <Text style={FeedStyles.description_text}>{description}</Text>
+            <Text style={FeedStyles.description}>{description}</Text>
+            <View style={FeedStyles.buttons_container}>
+                <TouchableOpacity style={FeedStyles.button}>
+                    <Text style={FeedStyles.button_text}>Save</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={FeedStyles.button}>
+                    <Text style={FeedStyles.button_text}>Show on Map</Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
