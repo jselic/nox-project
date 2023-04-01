@@ -1,16 +1,25 @@
-import {Text, View} from "react-native";
+import {StyleSheet, View} from "react-native";
+import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 
 export function Map(){
+    let location = {
+        latitude: 46.05116231973432,
+        longitude: 14.469928934371586,
+        latitudeDelta: 0.009,
+        longitudeDelta: 0.009
+    }
     return (
         <View
             style={{
-                flexDirection: 'row',
-                height: 100,
-                padding: 20,
+                height: '100%'
             }}>
-            <View style={{backgroundColor: 'blue', flex: 0.3}} />
-            <View style={{backgroundColor: 'red', flex: 0.5}} />
-            <Text>Hello World!</Text>
+            <MapView
+                style={StyleSheet.absoluteFillObject}
+            provider={PROVIDER_GOOGLE}
+            mapType='hybrid'
+            region={location}>
+                <Marker coordinate={{latitude: location.latitude, longitude: location.longitude}} />
+            </MapView>
         </View>
     )
 }
