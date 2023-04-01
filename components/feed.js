@@ -1,18 +1,52 @@
-import {Text, View, ScrollView , ViewComponent} from "react-native";
+import React, {useState} from "react"
+import {Text, View, ScrollView , ViewComponent, TouchableOpacity} from "react-native";
 import {ChallengeBox} from "./challenge_box";
+import {CommunityBox} from "./community_box";
+import * as GeneralStyles from '../styles/general_style.js'
+import challenges from '../assets/challenges.json';
+import community from '../assets/community.json';
 
 export function Feed(){
-    return (
-        <View>
-            <View>
-                <Text>This is the beginning of the feed!</Text>
-            </View>
 
+    const [activeFeed, setActiveFeed] = useState('challenges')
+
+    const toggleFeed = () => {
+        setActiveFeed(activeFeed === 'challenges' ? 'community' : 'challenges')
+    };
+
+    return (
+        <View style={GeneralStyles.container}>
+            <View style={GeneralStyles.header}>
+                <Text style={GeneralStyles.title}>{activeFeed === 'challenges' ? 'Challenges' : 'Community'}</Text>
+                <Text style={GeneralStyles.toggle_button} onPress={toggleFeed}>
+                    {activeFeed === 'challenges' ? 'View community' : 'View challenges'}
+                </Text>
+            </View>
             <ScrollView>
-                <ChallengeBox points={"10"} distance={"1.5km"} title={"Challenge 1"} description = {"lorem ipsum whatever"} time_left={"20 days"}></ChallengeBox>
-                <ChallengeBox points={"15"} distance={"2.5km"} title={"Challenge 2"} description = {"lorem ipsum whatever"} time_left={"20 days"}></ChallengeBox>
-                <ChallengeBox points={"20"} distance={"3.5km"} title={"Challenge 3"} description = {"lorem ipsum whatever"} time_left={"20 days"}></ChallengeBox>
-                <ChallengeBox points={"20"} distance={"3.5km"} title={"Challenge 3"} description = {"lorem ipsum whatever"} time_left={"20 days"}></ChallengeBox>
+                {activeFeed === 'challenges'
+                ? challenges.map((challenge,index) =>(
+                    <ChallengeBox
+                        key={index}
+                        points={challenge.points}
+                        distance={challenge.distance}
+                        title={challenge.title}
+                        description={challenge.description}
+                        time_left={challenge.time_left}
+                    />
+                ))
+                : community.map((community_item, index) =>(
+                    <CommunityBox
+                        key={index}
+                        progress={community_item.progress}
+                        title={community_item.title}
+                        description={community_item.description}
+                        members={community_item.members}
+                        time_left={community_item.time_left}
+                        currentPoints={community_item.currentPoints}
+                        totalPoints={community_item.totalPoints}
+                    />
+                ))
+                }
             </ScrollView>
         </View>
     )

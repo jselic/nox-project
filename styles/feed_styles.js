@@ -1,7 +1,11 @@
-export const challenge_box = {
-    backgroundColor: 'yellow',
-    overflow: 'hidden',
-    width: '100%',
+export const feed_container = {
+    flex: 1,
+    marginHorizontal: '5%',
+    marginTop: '5%',
+    marginBottom: '5%',
+    backgroundColor: '#f2f2f2',
+    borderRadius: 20,
+    padding: 10,
 }
 
 export const container = {
@@ -20,10 +24,34 @@ export const container = {
     padding: 10,
 }
 
+export const progressBar = {
+    height: 10,
+    width: "70%",
+    backgroundColor: "lightgray",
+    borderRadius: 10,
+    overflow: "hidden",
+    marginVertical: 5,
+}
+
+export const progressBarFill={
+    height: "100%",
+    backgroundColor: "green"
+}
+
+export const title_container = {
+    width: '75%',
+    flexGrow: 1,
+    overflow: 'hidden',
+    paddingLeft: 10,
+    paddingTop: 10,
+    paddingBottom: 5,
+}
+
 export const title = {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: "bold",
     padding: 5,
+    overflow: "hidden",
 }
 
 export const points_and_distance_container = {
@@ -34,11 +62,11 @@ export const points_and_distance_container = {
 }
 
 export const meta_infoblock = {
+    flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     marginBottom: 10,
-    paddingBottom: 5,
 }
 
 export const points = {

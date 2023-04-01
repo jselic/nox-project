@@ -1,14 +1,23 @@
 export const container = {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
 };
 
-export const navbar = {
-    backgroundColor: 'green',
-    overflow: 'hidden',
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
+export const header = {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 10,
+}
+
+export const title = {
+    fontSize: 24,
+    fontWeight: 'bold',
+}
+
+export const toggle_button = {
+    fontSize: 16,
+    color: '#007AFF',
 }

@@ -1,0 +1,33 @@
+[
+  {
+    "type": "community",
+    "key": "comm1",
+    "title": "Yoga Club",
+    "description": "Join our weekly yoga sessions and earn points for your progress!",
+    "currentPoints": 200,
+    "totalPoints": 300,
+    "distance": "10 km",
+    "time_left": "20 days"
+  },
+  {
+    "type": "community",
+    "key": "comm2",
+    "title": "Running Group",
+    "description": "Join our running group and earn points for each kilometer run!",
+    "currentPoints": 100,
+    "totalPoints": 500,
+    "distance": "10 km",
+    "time_left": "20 days"
+  },
+  {
+    "type": "community",
+    "key": "comm3",
+    "title": "Book Club",
+    "description": "Join our book club and earn points for reading books and participating in discussions!",
+    "currentPoints": 50,
+    "totalPoints": 100,
+    "distance": "10 km",
+    "time_left": "20 days"
+  }
+
+]
