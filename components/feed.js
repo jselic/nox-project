@@ -39,6 +39,7 @@ export function Feed(){
                         key={index}
                         progress={community_item.progress}
                         title={community_item.title}
+                        distance={community_item.distance}
                         description={community_item.description}
                         members={community_item.members}
                         time_left={community_item.time_left}

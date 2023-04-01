@@ -5,16 +5,14 @@ import * as FeedStyles from '../styles/feed_styles.js'
 export function CommunityBox(props) {
     const {type, title, currentPoints, totalPoints, time_left, distance,description } = props;
     const progress = (currentPoints / totalPoints);
-    const points_text = `${currentPoints}/${totalPoints}`
+    const points_text = `${currentPoints} / ${totalPoints}`
 
     return (
         <View style={[FeedStyles.container_c, props.style]}>
             <View style={FeedStyles.meta_infoblock}>
                 <View style={FeedStyles.title_container}>
                     <Text style={FeedStyles.title}>{title}</Text>
-                    <View>
-                        <Progress.Bar progress={progress} style={{marginTop: 5}}></Progress.Bar>
-                    </View>
+                        <Progress.Bar progress={progress} style={{marginTop: 5, width: "66%"}}/>
                 </View>
                 <View style={FeedStyles.points_and_distance_container}>
                     <Text style={FeedStyles.points}>{points_text} pts.</Text>

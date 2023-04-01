@@ -55,7 +55,7 @@ export const progressBarFill={
 }
 
 export const title_container = {
-    width: '75%',
+    width: '55%',
     flexGrow: 1,
     overflow: 'hidden',
     paddingLeft: 10,
@@ -71,6 +71,7 @@ export const title = {
 }
 
 export const points_and_distance_container = {
+    width: "45%",
     flexDirection: "column",
     alignItems: "flex-end",
     justifyContent: "space-between",
