@@ -1,24 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react'
 import * as GeneralStyles from './styles/general_style.js'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {Feed} from "./components/feed";
 import {Map} from "./components/map";
 import {User} from "./components/user"
+import {Login} from "./components/login"
 
 const Tab = createBottomTabNavigator()
 
 export default function App() {
-  return (
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [currentUser, setCurrentUser] = useState({name: "user"})
+    const handleLogin = (user) => {
+        setCurrentUser(user);
+        setIsLoggedIn(true);
+    }
+
+    return (
     <NavigationContainer>
-        <Tab.Navigator>
-            <Tab.Screen name="Feed" component={Feed}/>
-            <Tab.Screen name="Map" component={Map}/>
-            <Tab.Screen name="User" component={User}/>
-        </Tab.Navigator>
+        {isLoggedIn ? (
+            <Tab.Navigator>
+                <Tab.Screen name="Feed" component={Feed}/>
+                <Tab.Screen name="Map" component={Map}/>
+                <Tab.Screen name={currentUser.name.split(" ")[0]} component={User}/>
+            </Tab.Navigator>
+        ) : (
+            <Login onLogin={handleLogin}></Login>
+        )}
+
     </NavigationContainer>
-  );
+    );
 }
 
 const styles = StyleSheet.create({

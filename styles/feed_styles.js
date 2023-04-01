@@ -24,6 +24,22 @@ export const container = {
     padding: 10,
 }
 
+export const container_c = {
+    backgroundColor: "#ffe",
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+        width: 0,
+        height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    margin: "5%",
+    marginTop: 0,
+    padding: 10,
+}
+
 export const progressBar = {
     height: 10,
     width: "70%",

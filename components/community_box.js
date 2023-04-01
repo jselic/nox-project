@@ -8,7 +8,7 @@ export function CommunityBox(props) {
     const points_text = `${currentPoints}/${totalPoints}`
 
     return (
-        <View style={[FeedStyles.container, props.style]}>
+        <View style={[FeedStyles.container_c, props.style]}>
             <View style={FeedStyles.meta_infoblock}>
                 <View style={FeedStyles.title_container}>
                     <Text style={FeedStyles.title}>{title}</Text>
