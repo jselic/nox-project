@@ -9,10 +9,10 @@ export function Feed(){
             </View>
 
             <ScrollView>
-                <ChallengeBox points={"10"} distance={"1.5km"} title={"Challenge 1"} description = {"lorem ipsum whatever"}></ChallengeBox>
-                <ChallengeBox points={"15"} distance={"2.5km"} title={"Challenge 2"} description = {"lorem ipsum whatever"}></ChallengeBox>
-                <ChallengeBox points={"20"} distance={"3.5km"} title={"Challenge 3"} description = {"lorem ipsum whatever"}></ChallengeBox>
-                <ChallengeBox points={"20"} distance={"3.5km"} title={"Challenge 3"} description = {"lorem ipsum whatever"}></ChallengeBox>
+                <ChallengeBox points={"10"} distance={"1.5km"} title={"Challenge 1"} description = {"lorem ipsum whatever"} time_left={"20 days"}></ChallengeBox>
+                <ChallengeBox points={"15"} distance={"2.5km"} title={"Challenge 2"} description = {"lorem ipsum whatever"} time_left={"20 days"}></ChallengeBox>
+                <ChallengeBox points={"20"} distance={"3.5km"} title={"Challenge 3"} description = {"lorem ipsum whatever"} time_left={"20 days"}></ChallengeBox>
+                <ChallengeBox points={"20"} distance={"3.5km"} title={"Challenge 3"} description = {"lorem ipsum whatever"} time_left={"20 days"}></ChallengeBox>
             </ScrollView>
         </View>
     )
