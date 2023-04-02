@@ -12,7 +12,7 @@ export function CommunityBox(props) {
             <View style={FeedStyles.meta_infoblock}>
                 <View style={FeedStyles.title_container}>
                     <Text style={FeedStyles.title}>{title}</Text>
-                        <Progress.Bar progress={progress} style={{marginTop: 5, width: "66%"}}/>
+                        <Progress.Bar progress={progress} style={{marginTop: 5, width: "100%"}}/>
                 </View>
                 <View style={FeedStyles.points_and_distance_container}>
                     <Text style={FeedStyles.points}>{points_text} pts.</Text>

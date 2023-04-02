@@ -8,6 +8,7 @@ import {Feed} from "./components/feed";
 import {Map} from "./components/map";
 import {User} from "./components/user"
 import {Login} from "./components/login"
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Tab = createBottomTabNavigator()
 
@@ -16,7 +17,8 @@ export default function App() {
     const [currentUser, setCurrentUser] = useState({name: "user"})
     const handleLogin = (user) => {
         setCurrentUser(user);
-        setIsLoggedIn(true);
+        //HERE WE SET ASYNC VARIABLE
+        AsyncStorage.setItem('currentUserData', JSON.stringify(user)).then(() => setIsLoggedIn(true))
     }
 
     return (
