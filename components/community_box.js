@@ -6,7 +6,7 @@ import {useNavigation} from "@react-navigation/native";
 export function CommunityBox(props) {
     const {id, type, title, currentPoints, totalPoints, time_left, distance, description} = props;
     const progress = (currentPoints / totalPoints);
-    const points_text = `${currentPoints} / ${totalPoints}`
+    const points_text = `${currentPoints} / ${totalPoints}`;
 
     const navigation = useNavigation();
 
