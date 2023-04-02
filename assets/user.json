@@ -3,6 +3,7 @@
     "username": "P",
     "password": "D",
     "name": "Aljaž Podgornik",
-    "points": 1234
+    "points": 1234,
+    "saved_challenges" : [0,1]
   }
 ]

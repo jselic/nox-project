@@ -19,7 +19,7 @@ export function Login({onLogin}){
 
     return (
         <View style={LoginStyles.container}>
-            <Text style={LoginStyles.logo}>My App</Text>
+            <Text style={LoginStyles.logo}>Nox</Text>
             {errorMessage ? <Text style={LoginStyles.error}>{errorMessage}</Text> : null}
             <View style={LoginStyles.input_view}>
                 <TextInput

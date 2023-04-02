@@ -31,5 +31,16 @@
     "time_left": "20 days",
     "location_latitude":46.070104,
     "location_longitude":14.517482
+  },
+  {
+    "type": "challenge",
+    "id": 3,
+    "title": "Wildlife Hunting",
+    "points": "15",
+    "distance": "0.5 km",
+    "description": "Suspendisse volutpat, mauris at pretium pellentesque, ex purus eleifend magna, eu suscipit sapien nisi a mi. Aliquam quis sem eros. Duis euismod odio quis justo finibus, ut consequat ex rhoncus. Duis dictum eget quam ut luctus. Duis tincidunt enim eu tellus malesuada, ut blandit quam iaculis. Integer ac lorem ante. Etiam sit amet tristique justo. Suspendisse a lacinia ipsum. In hac habitasse platea dictumst. Donec iaculis quis velit non maximus. Cras euismod risus vel risus convallis eleifend. Sed id sollicitudin eros. Sed facilisis enim ut tincidunt pharetra. Sed pretium urna vel massa venenatis fermentum.",
+    "time_left": "3 days",
+    "location_latitude":46.170104,
+    "location_longitude":14.427482
   }
 ]

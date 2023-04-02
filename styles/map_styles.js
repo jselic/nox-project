@@ -6,10 +6,8 @@ export const marker1 = {
     borderColor: '#87cefa',
     borderWidth: 2,
     shadowColor: '#87cefa',
-    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.8,
     shadowRadius: 4,
-    elevation: 5,
 }
 
 export const marker2 = {
@@ -20,10 +18,8 @@ export const marker2 = {
     borderColor: '#87face',
     borderWidth: 2,
     shadowColor: '#87cefa',
-    shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.8,
     shadowRadius: 4,
-    elevation: 5,
 }
 
 export const callout = {

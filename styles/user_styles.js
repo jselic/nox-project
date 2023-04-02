@@ -7,7 +7,7 @@ export const container = {
     backgroundColor: '#eee',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '40%',
+    height: '20%',
 }
 
 export const text = {
