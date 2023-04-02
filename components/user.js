@@ -38,11 +38,14 @@ export function User(){
                         if (userData.saved_challenges.includes(challenge.id)){
                             return <ChallengeBox
                                 key={index}
+                                id={challenge.id}
                                 points={challenge.points}
                                 distance={challenge.distance}
                                 title={challenge.title}
                                 description={challenge.description}
                                 time_left={challenge.time_left}
+                                location_longitude={challenge.location_longitude}
+                                location_latitude={challenge.location_latitude}
                             />
                         }
                     })}
