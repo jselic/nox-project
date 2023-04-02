@@ -3,13 +3,16 @@ import * as FeedStyles from '../styles/feed_styles.js'
 import {useNavigation} from "@react-navigation/native";
 
 export function ChallengeBox(props){
-    const {id, points,distance,title,description, time_left} = props;
+    const {id, points,distance,title,description, time_left, location_longitude, location_latitude} = props;
 
     const navigation = useNavigation();
 
     const OpenChallenge = () => {
-        console.log("OPEN CHALLENGE " + id);
         navigation.navigate('Challenge', {id: id})
+    }
+
+    const OpenMap = () => {
+        navigation.navigate('Map', {longitude: location_longitude, latitude: location_latitude})
     }
 
     return (
@@ -30,7 +33,7 @@ export function ChallengeBox(props){
                     <TouchableOpacity style={FeedStyles.button}>
                         <Text style={FeedStyles.button_text}>Save</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={FeedStyles.button2}>
+                    <TouchableOpacity style={FeedStyles.button2} onPress={OpenMap}>
                         <Text style={FeedStyles.button_text2}>Show on Map</Text>
                     </TouchableOpacity>
                 </View>

@@ -33,6 +33,8 @@ export function Feed(){
                         title={challenge.title}
                         description={challenge.description}
                         time_left={challenge.time_left}
+                        location_longitude={challenge.location_longitude}
+                        location_latitude={challenge.location_latitude}
                     />
                 ))
                 : community.map((community_item, index) =>(

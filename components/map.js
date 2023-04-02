@@ -7,10 +7,10 @@ import {ChallengeBox} from "./challenge_box";
 import React from "react";
 import * as MapStyles from "../styles/map_styles.js"
 
-export function Map(){
+export function Map({route}){
     let location = {
-        latitude: 46.04999890020227,
-        longitude: 14.46904593724097,
+        latitude: route?.params.latitude || 46.04999890020227,
+        longitude: route?.params.longitude || 14.46904593724097,
         latitudeDelta: 0.009,
         longitudeDelta: 0.009
     }
