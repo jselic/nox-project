@@ -2,6 +2,7 @@ import {Button, Text, View} from "react-native";
 import challenges from '../assets/challenges.json';
 import {useEffect, useState} from "react";
 import {ChallengeBox} from "./challenge_box";
+import * as FeedStyles from "../styles/feed_styles";
 
 export function Challenge({route}) {
     const id = route?.params.id >= 0 ? route?.params.id : -1;
@@ -30,30 +31,22 @@ export function Challenge({route}) {
         <View>
             {challenge ? (
                 <View>
-                    <View style={{
-                        flexDirection: 'row',
-                        height: 30
-                    }}>
-                        <Text>{challenge.name}</Text>
+                    <View style={FeedStyles.title_container}>
+                        <Text style={FeedStyles.title}>{challenge.title}</Text>
                     </View>
-                    <View style={{flexDirection: 'row', height: 20}}>
-                        <View>
-                            <Text>Distance: {challenge.distance}KM</Text>
-                        </View>
-                        <View>
-                            <Text>Points: {challenge.points}</Text>
-                        </View>
+                    <View style={FeedStyles.points_and_distance_container}>
+                        <Text style={FeedStyles.distance}>Distance: {challenge.distance}</Text>
+                        <Text style={FeedStyles.points}>Points: {challenge.points}</Text>
+                        <Text style={FeedStyles.time_left}>{challenge.time_left} left</Text>
                     </View>
                     <View>
-                        <Text>{challenge.description}
+                        <Text style={FeedStyles.description}>{challenge.description}
                         </Text>
                     </View>
-                    <View
-                        style={{
-                            flexDirection: 'row',
-                            height: 60
-                        }}>
-                        <Button title="save_button" onPress={saveChallenge}>SAVE</Button>
+                    <View style={FeedStyles.buttons_container}>
+                        <View style={{padding: 20}}>
+                            <Button title="save_button" onPress={saveChallenge}>SAVE</Button>
+                        </View>
                     </View>
                 </View>
             ) : (<View></View>)}
