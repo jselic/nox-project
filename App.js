@@ -8,6 +8,7 @@ import {Feed} from "./components/feed";
 import {Map} from "./components/map";
 import {User} from "./components/user"
 import {Login} from "./components/login"
+import {Challenge} from "./components/challenge";
 
 const Tab = createBottomTabNavigator()
 
@@ -26,6 +27,7 @@ export default function App() {
                 <Tab.Screen name="Feed" component={Feed}/>
                 <Tab.Screen name="Map" component={Map}/>
                 <Tab.Screen name={currentUser.name.split(" ")[0]} component={User}/>
+                <Tab.Screen name={"Challenge"} component={Challenge}/>
             </Tab.Navigator>
         ) : (
             <Login onLogin={handleLogin}></Login>
