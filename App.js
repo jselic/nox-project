@@ -11,6 +11,7 @@ import {Login} from "./components/login";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {Challenge} from "./components/challenge";
 import {Ionicons, MaterialIcons} from '@expo/vector-icons';
+import {Community} from "./components/community";
 
 const Tab = createBottomTabNavigator()
 
@@ -49,6 +50,9 @@ export default function App() {
                     }}
                 />
                 <Tab.Screen name={"Challenge"} component={Challenge} options={{
+                    tabBarButton: props => null,
+                }}/>
+                <Tab.Screen name={"Community"} component={Community} options={{
                     tabBarButton: props => null,
                 }}/>
             </Tab.Navigator>

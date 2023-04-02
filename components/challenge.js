@@ -1,10 +1,27 @@
 import {Button, Text, View} from "react-native";
+import challenges from '../assets/challenges.json';
+import {useEffect, useState} from "react";
+import {ChallengeBox} from "./challenge_box";
+import * as FeedStyles from "../styles/feed_styles";
 
-export function Challenge(id) {
-    let name = "Running";
-    let distance = 6.5;
-    let points = 17;
-    let description = "About three things I was absolutely positive. First, Edward was a vampire. Second, there was a part of him-and I didn’t know how potent that part might be-that thirsted for my blood. And third, I was unconditionally and irrevocably in love with him.";
+export function Challenge({route}) {
+    const id = route?.params.id >= 0 ? route?.params.id : -1;
+    // const [challenge, setChallenge] = useState(null)
+
+
+    // TODO: fix
+    if (id === -1) {
+        return undefined;
+    }
+    const challenge = challenges[id];
+
+    /*
+    useEffect( () => {
+        console.log(route)
+        setChallenge(challenges.find(c => {c.id === tmpId}))
+        console.log(id + " " + challenge);
+        }, [id]
+    )*/
 
     function saveChallenge() {
         console.log("SAVING CHALLENGE")
@@ -12,59 +29,27 @@ export function Challenge(id) {
 
     return (
         <View>
-            <View
-                style={{
-                    flexDirection: 'row',
-                    height: 30
-                }}>
-                <Text>{name}</Text>
-            </View>
-            <View style={{flexDirection: 'row', height:20}}>
+            {challenge ? (
                 <View>
-                    <Text>Distance: {distance}KM</Text>
+                    <View style={FeedStyles.title_container}>
+                        <Text style={FeedStyles.title}>{challenge.title}</Text>
+                    </View>
+                    <View style={FeedStyles.points_and_distance_container}>
+                        <Text style={FeedStyles.distance}>Distance: {challenge.distance}</Text>
+                        <Text style={FeedStyles.points}>Points: {challenge.points}</Text>
+                        <Text style={FeedStyles.time_left}>{challenge.time_left} left</Text>
+                    </View>
+                    <View>
+                        <Text style={FeedStyles.description}>{challenge.description}
+                        </Text>
+                    </View>
+                    <View style={FeedStyles.buttons_container}>
+                        <View style={{padding: 20}}>
+                            <Button title="SAVE" onPress={saveChallenge}/>
+                        </View>
+                    </View>
                 </View>
-                <View>
-                    <Text>Points: {points}</Text>
-                </View>
-            </View>
-            <View>
-                <Text>{description}
-                </Text>
-            </View>
-            <View
-                style={{
-                    flexDirection: 'row',
-                    height: 60
-                }}>
-                <Button title="save_button" onPress={saveChallenge}>SAVE</Button>
-            </View>
+            ) : (<View></View>)}
         </View>
-        /*
-        <View>
-            <View
-                style={{
-                    flexDirection: 'row',
-                    height: 30
-                }}>
-                <Text>{name}</Text>
-            </View>
-            <View style={{flexDirection: 'row', height:20}}>
-                <View>
-                    <Text>Distance: {distance}KM</Text>
-                </View>
-                <View>
-                    <Text>Points: {points}</Text>
-                </View>
-            </View>
-            <View>{description}</View>
-            <View
-                style={{
-                    flexDirection: 'row',
-                    height: 30,
-                    padding: 20
-                }}>
-                <Button title="save_button" onPress={saveChallenge}>SAVE</Button>
-            </View>
-        </View>*/
     )
 }

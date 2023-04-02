@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "type": "community",
     "key": "comm1",
     "title": "New Walking Trail",
@@ -12,6 +13,7 @@
     "location_longitude":14.529557
   },
   {
+    "id": 1,
     "type": "community",
     "key": "comm2",
     "title": "The Summit Inn",
@@ -24,6 +26,7 @@
     "location_longitude":14.602139
   },
   {
+    "id": 2,
     "type": "community",
     "key": "comm3",
     "title": "Park Renovation",
