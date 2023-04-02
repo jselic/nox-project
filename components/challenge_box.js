@@ -8,7 +8,7 @@ export function ChallengeBox(props){
     const navigation = useNavigation();
 
     const OpenChallenge = () => {
-        console.log("OPEN CHALLENGE " + id);
+        // console.log("OPEN CHALLENGE " + id);
         navigation.navigate('Challenge', {id: id})
     }
 
