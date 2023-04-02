@@ -1,3 +1,7 @@
+export let smalltext = {
+    fontSize: 14,
+    marginBottom: 25,
+};
 export const container = {
     flex: 1,
     backgroundColor: '#fff',
@@ -8,7 +12,7 @@ export const container = {
 export const logo = {
     fontWeight: 'bold',
     fontSize: 50,
-    marginBottom: 40,
+    marginBottom: 10,
 }
 
 export const error = {

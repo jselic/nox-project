@@ -20,6 +20,7 @@ export function Login({onLogin}){
     return (
         <View style={LoginStyles.container}>
             <Text style={LoginStyles.logo}>Nox</Text>
+            <Text style={LoginStyles.smalltext}>Be the change</Text>
             {errorMessage ? <Text style={LoginStyles.error}>{errorMessage}</Text> : null}
             <View style={LoginStyles.input_view}>
                 <TextInput

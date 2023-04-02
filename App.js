@@ -10,6 +10,7 @@ import {User} from "./components/user";
 import {Login} from "./components/login";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {Challenge} from "./components/challenge";
+import {Ionicons, MaterialIcons} from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator()
 
@@ -26,9 +27,27 @@ export default function App() {
     <NavigationContainer>
         {isLoggedIn ? (
             <Tab.Navigator>
-                <Tab.Screen name="Feed" component={Feed}/>
-                <Tab.Screen name="Map" component={Map}/>
-                <Tab.Screen name={currentUser.name.split(" ")[0]} component={User}/>
+                <Tab.Screen name="Feed" component={Feed}
+                    options={{
+                        tabBarIcon: ({color,size}) => (
+                          <MaterialIcons name="dashboard" size={size} color={color}/>
+                        ),
+                    }}
+                />
+                <Tab.Screen name="Map" component={Map}
+                    options={{
+                        tabBarIcon: ({color,size}) => (
+                            <MaterialIcons name="public" size={size} color={color}/>
+                        ),
+                    }}
+                />
+                <Tab.Screen name={currentUser.name.split(" ")[0]} component={User}
+                    options={{
+                        tabBarIcon: ({color,size}) => (
+                            <MaterialIcons name="person" size={size} color={color}/>
+                        ),
+                    }}
+                />
                 <Tab.Screen name={"Challenge"} component={Challenge} options={{
                     tabBarButton: props => null,
                 }}/>

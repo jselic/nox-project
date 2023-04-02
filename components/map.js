@@ -8,9 +8,9 @@ import React from "react";
 import * as MapStyles from "../styles/map_styles.js"
 
 export function Map({route}){
-    let location = {
-        latitude: route?.params.latitude || 46.04999890020227,
-        longitude: route?.params.longitude || 14.46904593724097,
+    location = {
+        latitude: route?.params?.latitude || 46.04999890020227,
+        longitude: route?.params?.longitude || 14.46904593724097,
         latitudeDelta: 0.009,
         longitudeDelta: 0.009
     }
