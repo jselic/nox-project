@@ -6,7 +6,9 @@
     "points": "25",
     "distance": "10 km",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "time_left": "20 days"
+    "time_left": "20 days",
+    "location_latitude":46.056946,
+    "location_longitude":14.505751
   },
   {
     "type": "challenge",
@@ -15,7 +17,9 @@
     "points": "15",
     "distance": "12 km",
     "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-    "time_left": "20 days"
+    "time_left": "20 days",
+    "location_latitude":46.048232,
+    "location_longitude":14.496438
   },
   {
     "type": "challenge",
@@ -24,6 +28,8 @@
     "points": "35",
     "distance": "15 km",
     "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
-    "time_left": "20 days"
+    "time_left": "20 days",
+    "location_latitude":46.070104,
+    "location_longitude":14.517482
   }
 ]

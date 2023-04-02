@@ -7,7 +7,9 @@
     "currentPoints": 2000,
     "totalPoints": 3000,
     "distance": "5 km",
-    "time_left": "17 days"
+    "time_left": "17 days",
+    "location_latitude":46.106547,
+    "location_longitude":14.529557
   },
   {
     "type": "community",
@@ -17,7 +19,9 @@
     "currentPoints": 1000,
     "totalPoints": 5000,
     "distance": "9 km",
-    "time_left": "20 days"
+    "time_left": "20 days",
+    "location_latitude":46.069632,
+    "location_longitude":14.602139
   },
   {
     "type": "community",
@@ -27,7 +31,9 @@
     "currentPoints": 500,
     "totalPoints": 1000,
     "distance": "10 km",
-    "time_left": "13 days"
+    "time_left": "13 days",
+    "location_latitude":46.069632,
+    "location_longitude":14.447769
   }
 
 ]
