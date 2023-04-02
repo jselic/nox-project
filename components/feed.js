@@ -27,6 +27,7 @@ export function Feed(){
                 ? challenges.map((challenge,index) =>(
                     <ChallengeBox
                         key={index}
+                        id={challenge.id}
                         points={challenge.points}
                         distance={challenge.distance}
                         title={challenge.title}
