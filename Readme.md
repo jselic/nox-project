@@ -21,3 +21,4 @@ Expo Go
 3. Poženi `npm install`
 4. Poženi aplikacijo z `npx expo start`
 5. Z aplikacijo Expo Go skeniraj generirano QR kodo (sledi navodilom v konzoli)
+6. Prijavi se v aplikacijo z uporabniškim imenom "P", in geslom "D".
