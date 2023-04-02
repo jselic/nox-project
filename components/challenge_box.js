@@ -1,12 +1,15 @@
 import {StyleSheet, Text, View, TouchableOpacity} from "react-native";
 import * as FeedStyles from '../styles/feed_styles.js'
+import {useNavigation} from "@react-navigation/native";
 
 export function ChallengeBox(props){
-    const {points,distance,title,description, time_left} = props;
+    const {id, points,distance,title,description, time_left} = props;
+
+    const navigation = useNavigation();
 
     const OpenChallenge = () => {
-        console.log("OPEN CHALLENGE");
-        return undefined;
+        console.log("OPEN CHALLENGE " + id);
+        navigation.navigate('Challenge', {id: id})
     }
 
     return (
