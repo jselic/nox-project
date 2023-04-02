@@ -37,6 +37,7 @@ export function Feed(){
                 ))
                 : community.map((community_item, index) =>(
                     <CommunityBox
+                        id={community_item.id}
                         key={index}
                         progress={community_item.progress}
                         title={community_item.title}

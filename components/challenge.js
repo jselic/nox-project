@@ -45,7 +45,7 @@ export function Challenge({route}) {
                     </View>
                     <View style={FeedStyles.buttons_container}>
                         <View style={{padding: 20}}>
-                            <Button title="save_button" onPress={saveChallenge}>SAVE</Button>
+                            <Button title="SAVE" onPress={saveChallenge}/>
                         </View>
                     </View>
                 </View>

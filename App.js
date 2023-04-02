@@ -10,6 +10,7 @@ import {User} from "./components/user";
 import {Login} from "./components/login";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import {Challenge} from "./components/challenge";
+import {Community} from "./components/community";
 
 const Tab = createBottomTabNavigator()
 
@@ -30,6 +31,9 @@ export default function App() {
                 <Tab.Screen name="Map" component={Map}/>
                 <Tab.Screen name={currentUser.name.split(" ")[0]} component={User}/>
                 <Tab.Screen name={"Challenge"} component={Challenge} options={{
+                    tabBarButton: props => null,
+                }}/>
+                <Tab.Screen name={"Community"} component={Community} options={{
                     tabBarButton: props => null,
                 }}/>
             </Tab.Navigator>
